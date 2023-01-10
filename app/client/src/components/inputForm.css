@@ -1,0 +1,35 @@
+.Form{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+    to right,
+    pink 0%,
+    rgb(242, 192, 255) 50%,
+    rgb(233, 197, 240) 50%,
+    paleturquoise 100%
+    );
+    padding: 0px 60px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button{
+    height: 40px;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 35%;
+    background-color: blueviolet;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold ;
+    color: rgb(255, 255, 255);
+}
+
+input{
+    width: 50%;
+}
+
+Select{
+    width: 10px;
+}
