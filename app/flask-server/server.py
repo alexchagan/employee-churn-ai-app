@@ -73,6 +73,9 @@ def predict(np_array):
     dir = up(up(up(__file__)))
     model_path = os.path.join(dir, 'save_dicts/xgb.pkl')
     # model = pickle.load(open(model_path, 'rb'))
+    test_result = "50"
+    return test_result
+
 
 
 @app.route("/api/", methods=['POST', 'GET'])
@@ -82,10 +85,9 @@ def get_answers():
         req = request.json
         values_np = json_to_numpy(req)
         
-        predict(values_np)
+        result = predict(values_np)
 
-
-        return jsonify(name='john')
+        return jsonify(result=result)
 
 if __name__ == "__main__":
     app.run(debug=True)

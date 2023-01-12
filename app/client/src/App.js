@@ -6,6 +6,8 @@ import "./App.css"
 
 
 function App() {
+
+  const [response, setResponse] = useState(null)
  
   const handleSubmit = (values) =>
   {
@@ -18,7 +20,10 @@ function App() {
       body: JSON.stringify({values}),
     })
     .then(res => res.json())
-    .then(res => console.log(res));
+    .then(res => {
+      console.log(res)
+      setResponse(res.result)
+    }) 
   }
   
 
@@ -28,7 +33,9 @@ function App() {
       <div>
         <InputForm onSave={handleSubmit}/>
       </div>
-      
+      <div>
+      {response && <div className='response'>The result is: {response}/100 Satisfaction</div>}
+      </div>
     </div>
    
   )
