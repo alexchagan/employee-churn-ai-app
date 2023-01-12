@@ -3,10 +3,10 @@
     flex-direction: column;
     background: linear-gradient(
     to right,
-    pink 0%,
-    rgb(242, 192, 255) 50%,
-    rgb(233, 197, 240) 50%,
-    paleturquoise 100%
+    rgb(253, 238, 240) 0%,
+    rgb(250, 232, 255) 50%,
+    rgb(250, 227, 255) 50%,
+    rgb(230, 255, 255) 100%
     );
     padding: 0px 60px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
