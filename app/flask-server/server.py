@@ -3,10 +3,11 @@ from flask_cors import CORS, cross_origin
 import numpy as np
 import pickle
 import sklearn
-# from sklearn.preprocessing import StandardScale
+import joblib
 import os
 from os.path import dirname as up
 import sys;print(sys.version)
+
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)
@@ -24,13 +25,13 @@ def json_to_numpy(json_req):
     values_np : numpy_array
         A converted numpy array
     '''
-    print(type(json_req))
-    values_arr = []
+    values_arr = [0]
     (_ ,values_dict), = json_req.items()
     for key ,value in values_dict.items():
         values_arr.append(transform_value(key,value))   
     values_np = np.array(values_arr)
     print ('values_np', values_np)
+    values_np = np.reshape(values_np, (1,len(values_np)))
     return values_np
 
 def transform_value(key, value):
@@ -62,18 +63,21 @@ def transform_value(key, value):
             return float(value)
         case 'promotion_last_5year':
             return float(value)
-        case 'left':
+        case 'salary':
             return float(value)
-        case 'salary_low':
-            return float(value)
-        case 'salary_medium':
-            return float(value)
+       
 
 def predict(np_array):
     dir = up(up(up(__file__)))
     model_path = os.path.join(dir, 'save_dicts/xgb.pkl')
-    # model = pickle.load(open(model_path, 'rb'))
-    test_result = "50"
+    model = joblib.load(model_path , mmap_mode=None)
+    pred = model.predict(np_array)
+    print(pred)
+    pred = pred[0]  
+    if pred == 0:
+        test_result = "not leave"
+    else:
+        test_result = "leave"
     return test_result
 
 
