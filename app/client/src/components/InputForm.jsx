@@ -5,9 +5,15 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { string, number, z } from 'zod' // validation library
 import "./inputForm.css"
 
-const options = [
+const yesNoOptions = [
     { value: "1", label: "Yes"},
     { value: "0", label: "No"},
+];
+
+const salaryOptions = [
+    { value: "2", label: "High"},
+    { value: "1", label: "Medium"},
+    { value: "0", label: "Low"},
 ];
 
 const schema = z.object({
@@ -18,9 +24,7 @@ const schema = z.object({
     time_spend_company: number().int(),
     work_accident: string(),
     promotion_last_5year: string(),
-    left: string(),
-    salary_low: string(),
-    salary_medium: string(),
+    salary: string(),
 });
 
 const InputForm = ({onSave, user={}}) => {
@@ -29,9 +33,8 @@ const InputForm = ({onSave, user={}}) => {
 
   const { field: work_accident_field } = useController({name: 'work_accident', control })
   const { field: promotion_last_5year_field } = useController({name: 'promotion_last_5year', control })
-  const { field: left_field } = useController({name: 'left', control })
-  const { field: salary_low_field } = useController({name: 'salary_low', control })
-  const { field: salary_medium_field } = useController({name: 'salary_medium', control })
+  const { field: salary_field } = useController({name: 'salary', control })
+  
   
   const {errors} = formState
 
@@ -43,17 +46,10 @@ const InputForm = ({onSave, user={}}) => {
     promotion_last_5year_field.onChange(option.value)
   };
 
-  const handleSelectChangeLeft = (option) => {
-    left_field.onChange(option.value)
+  const handleSelectSalary = (option) => {
+    salary_field.onChange(option.value)
   };
 
-  const handleSelectChangeSalaryLow = (option) => {
-    salary_low_field.onChange(option.value)
-  };
-
-  const handleSelectChangeSalaryMedium = (option) => {
-    salary_medium_field.onChange(option.value)
-  };
 
   const handleSave = (formValues) => {
     onSave(formValues)
@@ -80,41 +76,25 @@ const InputForm = ({onSave, user={}}) => {
             <p>Has there ever been a work accident ?</p>
             <div>
                 <Select
-                value={options.find(({ value }) => value === work_accident_field.label)}
+                value={yesNoOptions.find(({ value }) => value === work_accident_field.label)}
                 onChange={handleSelectChangeWorkAccident}
-                options={options}
+                options={yesNoOptions}
                 />
             </div>
             <p>Has the employee gotten a promotion in the last 5 years ?</p>
             <div>
                 <Select
-                value={options.find(({ value }) => value === promotion_last_5year_field.label)}
+                value={yesNoOptions.find(({ value }) => value === promotion_last_5year_field.label)}
                 onChange={ handleSelectChangePromotion}
-                options={options}
+                options={yesNoOptions}
                 />
             </div>
-            <p>Has the employee left the company on his own ?</p>
+            <p>What was the level of salary of the employee ?</p>
             <div>
                 <Select
-                value={options.find(({ value }) => value === left_field.label)}
-                onChange={ handleSelectChangeLeft}
-                options={options}
-                />
-            </div>
-            <p>Was the salary low ?</p>
-            <div>
-                <Select
-                value={options.find(({ value }) => value === salary_low_field.label)}
-                onChange={ handleSelectChangeSalaryLow}
-                options={options}
-                />
-            </div>
-            <p>Was the salary medium ?</p>
-            <div>
-                <Select
-                value={options.find(({ value }) => value === salary_medium_field.label)}
-                onChange={ handleSelectChangeSalaryMedium}
-                options={options}
+                value={salaryOptions.find(({ value }) => value === salary_field.label)}
+                onChange={ handleSelectSalary}
+                options={salaryOptions}
                 />
             </div>
             

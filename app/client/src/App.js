@@ -29,12 +29,12 @@ function App() {
 
   return(
     <div className="App">
-      <h2>Survey for Job Probability Calculation</h2>
+      <h2>Employee churn estimation AI (first year)</h2>
       <div>
         <InputForm onSave={handleSubmit}/>
       </div>
       <div>
-      {response && <div className='response'>The result is: {response}/100 Satisfaction</div>}
+      {response && <div className='response'>The result is: The employee will <span>{response}</span> in the first year of employment</div>}
       </div>
     </div>
    
