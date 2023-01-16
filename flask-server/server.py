@@ -68,8 +68,8 @@ def transform_value(key, value):
        
 
 def predict(np_array):
-    dir = up(up(up(__file__)))
-    model_path = os.path.join(dir, 'save_dicts/xgb.pkl')
+    
+    model_path = 'model/xgb.pkl'
     model = joblib.load(model_path , mmap_mode=None)
     pred = model.predict(np_array)
     print(pred)

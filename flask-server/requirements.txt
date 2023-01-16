@@ -1,0 +1,5 @@
+flask
+flask_cors
+numpy
+scikit-learn==1.0.2
+xgboost==1.7.1
