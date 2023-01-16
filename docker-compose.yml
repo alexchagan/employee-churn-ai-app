@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  client:
+    container_name: employee-churn-client
+    build: ./client/.
+    ports:
+      - 3000:3000/tcp
+   
+  
+  
+  app:
+    container_name: employee-churn-server
+    build: ./flask-server/.
+    ports:
+      - 5000:5000/tcp
+    

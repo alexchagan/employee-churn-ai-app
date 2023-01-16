@@ -1,10 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import numpy as np
-import pickle
-import sklearn
 import joblib
-import os
 from os.path import dirname as up
 import sys;print(sys.version)
 
@@ -94,4 +91,4 @@ def get_answers():
         return jsonify(result=result)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
