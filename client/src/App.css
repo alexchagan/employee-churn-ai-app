@@ -9,6 +9,9 @@
    url(https://i.pinimg.com/originals/04/34/89/043489e7922dabf9902965b964ca04a5.jpg);
    background-size: cover;
    background-position: center;  
+   padding-bottom: 8%;
+   
+   
 }
 
 h2{
@@ -17,10 +20,10 @@ h2{
 }
 
 .response{
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
-  margin-bottom: 100px;
+  
 }
 
 span{

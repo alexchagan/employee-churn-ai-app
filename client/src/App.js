@@ -37,6 +37,7 @@ function App() {
       {response && <div className='response'>The result is: The employee will <span>{response}</span> in the first year of employment</div>}
       </div>
     </div>
+    
    
   )
 
