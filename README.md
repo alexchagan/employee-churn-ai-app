@@ -25,7 +25,7 @@ Model was written and trained by Dor Getter github.com/DorGetter
 <br />
 <br />
 
-![Untitled](https://user-images.githubusercontent.com/44925899/212956574-faff2711-82e5-4a90-9881-da69971c38e6.png)
+![Untitled](https://user-images.githubusercontent.com/44925899/212982165-8b01c33d-018d-482a-9b75-3f0c2b0e0fae.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
