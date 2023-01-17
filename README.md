@@ -46,11 +46,13 @@ Model was written and trained by Dor Getter github.com/DorGetter
 ### Installation
 
 
-1. Clone the repo.
+1. Clone the repo:
+
    ```
    git clone https://github.com/alexchagan/employee-churn-ai-app.git
    ```
-2. Build docker-compose with file in the root directory.
+2. Build docker-compose with file in the root directory:
+
    ```
    docker compose build
    ```
