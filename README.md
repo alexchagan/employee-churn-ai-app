@@ -16,7 +16,7 @@
 ## About The Project
 Deployment of a logistical regression model that was trained on structured data. <br /> 
 Such data contains a couple of values that relate to the work experience of the employee 
-and the model predicts the estimation of them staying in the company in the first year of employment.  <br />
+and the model predicts the estimation of them staying in the company in the current year of employment.  <br />
 The deployment consists of a full stack application: 
 1) Flask api written in Python, recieves value inputs from the frontend, runs the model and responds back to the frontend.
 2) React.js frontend that contains a form page for the user to fill the input values and display the model's result.
