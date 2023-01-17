@@ -43,7 +43,8 @@ def transform_value(key, value):
     
     Returns
     ----------
-    A transformed value 
+    float
+        A transformed value 
     '''
     match key:
         case 'satisfaction_level':
@@ -65,7 +66,19 @@ def transform_value(key, value):
        
 
 def predict(np_array):
+    '''Predicts if an employee will leave in the first year of employment based on 
+    structured data from a np array.
     
+    Parameters
+    ----------
+    np_array : numpy array
+        An array of values coming from the client input
+    
+    Returns
+    ----------
+    test_result : string
+        A result, "leave" or "not leave"
+    '''
     model_path = 'model/xgb.pkl'
     model = joblib.load(model_path , mmap_mode=None)
     pred = model.predict(np_array)
