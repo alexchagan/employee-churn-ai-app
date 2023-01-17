@@ -29,7 +29,7 @@ function App() {
 
   return(
     <div className="App">
-      <h2>Employee churn estimation AI (first year)</h2>
+      <h2>Employee churn estimation AI (current year)</h2>
       <div>
         <InputForm onSave={handleSubmit}/>
       </div>
