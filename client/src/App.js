@@ -34,7 +34,7 @@ function App() {
         <InputForm onSave={handleSubmit}/>
       </div>
       <div>
-      {response && <div className='response'>The result is: The employee will <span>{response}</span> in the first year of employment</div>}
+      {response && <div className='response'>The result is: The employee will <span>{response}</span> in the current year of employment</div>}
       </div>
     </div>
     
