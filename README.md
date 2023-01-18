@@ -80,7 +80,7 @@ Model was written and trained by Dor Getter github.com/DorGetter
 
 Alex Chagan  - alexchagan95@gmail.com
 
-Project Link: [https://github.com/alexchagan/sports-images-classifier](https://github.com/alexchagan/sports-images-classifier)
+Project Link: [https://github.com/alexchagan/employee-churn-ai-app](https://github.com/alexchagan/employee-churn-ai-app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
