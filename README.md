@@ -65,10 +65,13 @@ Model was written and trained by Dor Getter github.com/DorGetter
 ## Usage
 
 1. Run docker-compose:
-  ```
-   docker compose up
-  ```
-2. Fill the input values in the form page and press submit.
+
+   ```
+    docker compose up
+   ```
+2. Open the web page: http://localhost:3000/ 
+
+3. Fill the input values in the form page and press submit.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
